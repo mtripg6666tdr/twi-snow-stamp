@@ -16,19 +16,19 @@ test('returns false if given invalid snowflake', () => {
 
 test('returns correct timestamp when no time zone specified', () => {
 	expect(getEmbedTitle({ s: snowflake, l: 'en-US', z: '-' })).toBe(
-		'08/28/2015 8:03:39 PM UTC'
+		'07/01/2011 9:46:33 PM UTC'
 	)
 })
 
 test('returns correct timestamp with locale format', () => {
 	expect(getEmbedTitle({ s: snowflake, l: 'de', z: '-' })).toBe(
-		'28.08.2015 20:03:39 UTC'
+		'01.07.2011 21:46:33 UTC'
 	)
 	expect(getEmbedTitle({ s: snowflake, l: 'de-DE', z: '-' })).toBe(
-		'28.08.2015 20:03:39 UTC'
+		'01.07.2011 21:46:33 UTC'
 	)
 	expect(getEmbedTitle({ s: snowflake, l: 'zn', z: '-' })).toBe(
-		'2015/08/28 20:03:39 UTC'
+		'2011/07/01 21:46:33 UTC'
 	)
 })
 
@@ -39,5 +39,5 @@ test('returns correct timestamp with America/New_York time zone', () => {
 			l: 'en-US',
 			z: TZ_NAMES.indexOf('America/New_York'),
 		})
-	).toBe('08/28/2015 4:03:39 PM EDT')
+	).toBe('07/01/2011 5:46:33 PM EDT')
 })
