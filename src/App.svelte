@@ -85,7 +85,7 @@
 <main>
 	<hgroup>
 		<h2>❄️</h2>
-		<h1>Discord Snowflake to Timestamp Converter</h1>
+		<h1>Twitter Snowflake to Timestamp Converter</h1>
 	</hgroup>
 	<div id="dark-toggle">
 		<p style="margin-bottom: 0.2em; font-size: 1.1em; text-align: right">
@@ -98,7 +98,7 @@
 		/>
 	</div>
 	<p style="margin-bottom: 0.5em;">
-		Paste in a Discord snowflake to get the timestamp
+		Paste a Twitter snowflake to get the timestamp
 	</p>
 	<Help />
 	<div
@@ -110,7 +110,7 @@
 			bind:value={snowflake}
 			use:selectTextOnFocus
 			use:blurOnEscape
-			placeholder="e.g. 86913608335773696"
+			placeholder="e.g. 1396969503708389379"
 		/>
 	</div>
 

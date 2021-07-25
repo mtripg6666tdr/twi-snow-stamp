@@ -1,19 +1,21 @@
 # ❄️ Snow-Stamp
 
-I couldn't find a page anywhere that let you paste in a Discord snowflake to get the timestamp.
+I couldn't find a page anywhere that let you paste in a Twitter snowflake to get the timestamp.
 
 So I made one.
 
-🔗 https://y.at/❄️⚙️⏰👏
-
 👩‍💻 If you're a developer looking for the conversion code, check out [convert.js](src/convert.js)
+
+## Special thanks
+
+This project is a fork of [vegeta897/snow-stamp](https://github.com/vegeta897/snow-stamp) published under MIT license.
+Special thanks to [vegeta897](https://github.com/vegeta897), the creator of the original Snow-Stamp Converter, and all contributor.
 
 ## Contribute
 
 Pull requests and issues are welcome!
 
-- Add me on Discord `vegeta897#7777`
-- [Buy me a coffee](https://www.buymeacoffee.com/vegeta897)
+- Add me on Discord `うさみょん(myon2019)/mtripg6666tdr`
 
 ## Develop
 
@@ -39,7 +41,7 @@ The server runs on port 3000 by default, but you can set `PORT` in your environm
 
 ### Custom Epoch
 
-You can use a custom epoch instead of [Discord's](https://discord.com/developers/docs/reference#snowflakes) by setting environment variable `SNOWFLAKE_EPOCH` to the desired integer or with an `.env` file.
+You can use a custom epoch instead of Twitter by setting environment variable `SNOWFLAKE_EPOCH` to the desired integer or with an `.env` file.
 
 ---
 
