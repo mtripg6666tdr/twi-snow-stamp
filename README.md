@@ -15,7 +15,7 @@ Special thanks to [vegeta897](https://github.com/vegeta897), the creator of the 
 
 Pull requests and issues are welcome!
 
-- Add me on Discord `うさみょん(myon2019)/mtripg6666tdr`
+- Add me on Discord `うさみょん(myon2019)/mtripg6666tdr#4470`
 
 ## Develop
 
