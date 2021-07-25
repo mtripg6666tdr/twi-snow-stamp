@@ -4,11 +4,14 @@ I couldn't find a page anywhere that let you paste in a Twitter snowflake to get
 
 So I made one.
 
+🔗https://bit.ly/twi-snow
+
 👩‍💻 If you're a developer looking for the conversion code, check out [convert.js](src/convert.js)
 
 ## Special thanks
 
 This project is a fork of [vegeta897/snow-stamp](https://github.com/vegeta897/snow-stamp) published under MIT license.
+
 Special thanks to [vegeta897](https://github.com/vegeta897), the creator of the original Snow-Stamp Converter, and all contributor.
 
 ## Contribute
