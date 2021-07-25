@@ -1,0 +1,15 @@
+{
+	"short_name": "Twi Snow Stamp",
+	"name": "Twitter Snowflake to Timestamp Converter",
+	"icons": [
+		{
+			"src": "favicon.png",
+			"sizes": "192x192",
+			"type": "image/png"
+		}
+	],
+	"start_url": "./index.html",
+	"display": "standalone",
+	"theme_color": "#69eaff",
+	"background_color": "#ffffff"
+}
