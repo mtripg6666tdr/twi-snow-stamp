@@ -1,5 +1,5 @@
 {
-	"name": "snow-stamp",
+	"name": "twi-snow-stamp",
 	"version": "0.2.0",
 	"private": true,
 	"type": "module",
@@ -39,6 +39,6 @@
 		"format": "prettier --write .",
 		"test": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
 	},
-	"homepage": "https://github.com/vegeta897/snow-stamp#readme",
-	"issues": "https://github.com/vegeta897/snow-stamp/issues"
+	"homepage": "https://github.com/mtripg6666tdr/twi-snow-stamp#readme",
+	"issues": "https://github.com/mtripg6666tdr/twi-snow-stamp/issues"
 }
