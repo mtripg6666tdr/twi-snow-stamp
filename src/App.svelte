@@ -19,7 +19,6 @@
 	const dynamicMode = window.__SNOWSTAMP_DYNAMIC__
 	const { SNOWFLAKE_EPOCH } = process.env
 	const EPOCH = Number(SNOWFLAKE_EPOCH) || undefined
-	if (isNaN(EPOCH)) EPOCH = undefined
 
 	const queries = qs.parse(location.search)
 	let snowflake = queries.s || (queries.f && decodeSnowflake(queries.f)) || '',
