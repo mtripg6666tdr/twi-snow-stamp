@@ -17,14 +17,15 @@
 	import Switch from './Switch.svelte'
 
 	const dynamicMode = window.__SNOWSTAMP_DYNAMIC__
+	const { SNOWFLAKE_EPOCH } = process.env
+	const EPOCH = Number(SNOWFLAKE_EPOCH) || undefined
+	if (isNaN(EPOCH)) EPOCH = undefined
 
 	const queries = qs.parse(location.search)
 	let snowflake = queries.s || (queries.f && decodeSnowflake(queries.f)) || '',
 		timestamp,
 		error,
 		url
-
-	let epoch = +process.env.SNOWFLAKE_EPOCH || undefined
 
 	let shareStamp = getLocalStorageBoolean('shareStamp', true)
 	let shortenSnowflake = getLocalStorageBoolean('shortenSnowflake', true)
@@ -47,7 +48,7 @@
 		error = null
 		if (!snowflake.trim()) return
 		try {
-			timestamp = validateSnowflake(snowflake, epoch)
+			timestamp = validateSnowflake(snowflake, EPOCH)
 			updateURL()
 		} catch (e) {
 			error = e
