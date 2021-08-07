@@ -1,4 +1,4 @@
-# ❄️ Snow-Stamp
+# ❄️ Twi-Snow-Stamp
 
 I couldn't find a page anywhere that let you paste in a Twitter snowflake to get the timestamp.
 
