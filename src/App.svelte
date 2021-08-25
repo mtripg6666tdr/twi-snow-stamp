@@ -28,7 +28,7 @@
 
 	let shareStamp = getLocalStorageBoolean('shareStamp', true)
 	let shortenSnowflake = getLocalStorageBoolean('shortenSnowflake', true)
-	let darkMode = getLocalStorageBoolean('darkMode', true)
+	let darkMode = getLocalStorageBoolean('darkMode', false)
 
 	let locale, tz
 
