@@ -13,6 +13,14 @@ export function getISO(date) {
 }
 
 export function getTimeZoneName(date) {
+	if(Intl?.DateTimeFormat){
+		const timeZoneName = new Intl.DateTimeFormat('default', {
+			timeZoneName: "long"
+		})
+			.formatToParts(date)
+			.find(p => p.type.toLowerCase() === "timezonename");
+		if(timeZoneName) return timeZoneName.value;
+	}
 	const dateString = date.toString()
 	if (dateString.includes('(')) {
 		return dateString.split('(')[1].slice(0, -1)
