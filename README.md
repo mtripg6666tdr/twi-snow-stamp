@@ -47,5 +47,3 @@ The server runs on port 3000 by default, but you can set `PORT` in your environm
 You can use a custom epoch instead of Twitter by setting environment variable `SNOWFLAKE_EPOCH` to the desired integer or with an `.env` file.
 
 ---
-
-[![MadeWithSvelte.com shield](https://madewithsvelte.com/storage/repo-shields/3155-shield.svg)](https://madewithsvelte.com/p/snow-stamp/shield-link)
