@@ -8,6 +8,7 @@
 		detectTimeZone,
 		encodeSnowflake,
 		decodeSnowflake,
+		isSnowy,
 	} from './util.js'
 	import Help from './Help.svelte'
 	import Output from './Output.svelte'
@@ -15,6 +16,10 @@
 	import Credits from './Credits.svelte'
 	import { validateSnowflake } from './convert'
 	import Switch from './Switch.svelte'
+	import IconMoon from './IconMoon.svelte'
+	import IconSun from './IconSun.svelte'
+	import LetItSnow from './LetItSnow.svelte'
+	import { onMount } from 'svelte'
 
 	const dynamicMode = window.__SNOWSTAMP_DYNAMIC__
 	const { SNOWFLAKE_EPOCH } = process.env
@@ -30,6 +35,8 @@
 	let shortenSnowflake = getLocalStorageBoolean('shortenSnowflake', true)
 	let darkMode = getLocalStorageBoolean('darkMode', false)
 
+	let letItSnow, snowComponent
+
 	let locale, tz
 
 	$: updateSnowflake(snowflake)
@@ -41,16 +48,25 @@
 		localStorage.setItem('darkMode', darkMode)
 	}
 
+	onMount(() =>
+		setTimeout(() => window.document.body.classList.remove('preload'))
+	)
+
 	// Validate snowflake and update timestamp or error
 	function updateSnowflake() {
 		timestamp = null
 		error = null
+		letItSnow = false
 		if (!snowflake.trim()) return
 		try {
 			timestamp = validateSnowflake(snowflake, EPOCH)
 			updateURL()
 		} catch (e) {
-			error = e
+			if (isSnowy(snowflake)) {
+				letItSnow = true
+			} else {
+				error = e
+			}
 		}
 	}
 
@@ -84,13 +100,17 @@
 
 <main>
 	<hgroup>
-		<h2>❄️</h2>
+		<h2 on:click={() => snowComponent.addSnowflake()}>❄️</h2>
 		<h1>Twitter Snowflake to Timestamp Converter</h1>
 	</hgroup>
 	<div id="dark-toggle">
-		<p style="margin-bottom: 0.2em; font-size: 1.1em; text-align: right">
-			Dark mode
-		</p>
+		<div style="display:inline-block;position:relative; top:13px; right:2px;">
+			{#if darkMode}
+				<IconMoon />
+			{:else}
+				<IconSun />
+			{/if}
+		</div>
 		<Switch
 			bind:checked={darkMode}
 			switchColorEnabled="#bbb"
@@ -127,6 +147,7 @@
 	{#if error}
 		<p style="margin-top: 0.2em;">❌ {error}</p>
 	{/if}
+	<LetItSnow bind:this={snowComponent} {letItSnow} />
 	<hr />
 	<Credits />
 </main>
@@ -143,6 +164,9 @@
 	main h2 {
 		font-size: 5em;
 		margin: 0;
+		user-select: none;
+		cursor: pointer;
+		display: inline-block;
 	}
 
 	h1 {

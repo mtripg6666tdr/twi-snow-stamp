@@ -48,4 +48,4 @@ You can use a custom epoch instead of Twitter by setting environment variable `S
 
 ---
 
-_Made with svelte_
+[![MadeWithSvelte.com shield](https://madewithsvelte.com/storage/repo-shields/3155-shield.svg)](https://madewithsvelte.com/p/snow-stamp/shield-link)

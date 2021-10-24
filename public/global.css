@@ -116,3 +116,15 @@ button:focus {
 small {
 	font-size: 0.8em;
 }
+
+* {
+	transition-property: color, background-color;
+	transition-duration: 0.15s;
+	transition-delay: 0s;
+	transition-timing-function: ease-out;
+}
+
+.preload,
+.preload * {
+	transition-property: none !important;
+}
